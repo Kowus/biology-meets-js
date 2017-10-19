@@ -14,41 +14,19 @@
         var q = 1 - p;
         console.log(`generation 0:\t${a1a1}\t${a1a2}\t${a2a2}`);
 
+
         // Calculating the next generation
-        a1a1 = p * p;
-        a1a2 = 2 * p * q;
-        a2a2 = q * q;
 
-        console.log(`generation 1:\t${a1a1}\t${a1a2}\t${a2a2}`);
+        function create_next_generation() {
+            a1a1 = p * p;
+            a1a2 = 2 * p * q;
+            a2a2 = q * q;
+        }
 
-
-        a1a1 = p * p;
-        a1a2 = 2 * p * q;
-        a2a2 = q * q;
-
-        console.log(`generation 2:\t${a1a1}\t${a1a2}\t${a2a2}`);
-
-
-        a1a1 = p * p;
-        a1a2 = 2 * p * q;
-        a2a2 = q * q;
-
-        console.log(`generation 3:\t${a1a1}\t${a1a2}\t${a2a2}`);
-
-
-        a1a1 = p * p;
-        a1a2 = 2 * p * q;
-        a2a2 = q * q;
-
-        console.log(`generation 4:\t${a1a1}\t${a1a2}\t${a2a2}`);
-
-
-        a1a1 = p * p;
-        a1a2 = 2 * p * q;
-        a2a2 = q * q;
-
-        console.log(`generation 5:\t${a1a1}\t${a1a2}\t${a2a2}`);
-
+        for(let i=1; i< 8; i++){
+            create_next_generation();
+            console.log(`generation ${i}:    \t${a1a1}     \t${a1a2}    \t${a2a2}`);
+        }
 
     </script>
 
