@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducing Javascript</title>
+
+
+    <script>
+        var a1a1 = 0.15;
+        var a2a2 = 0.35;
+        var a1a2 = 1 - (a1a1 + a2a2);
+
+        var p = a1a1 + (a1a2 / 2);
+        var q = 1 - p;
+        console.log(`generation 0:    ${round_number(a1a1)}     ${round_number(a1a2)}      ${round_number(a2a2)}`);
+
+
+        for (let i = 1; i < 8; i++) {
+            create_next_generation();
+            console.log(`generation ${i}:    ${round_number(a1a1)}     ${round_number(a1a2)}    ${round_number(a2a2)}`);
+        }
+
+        // Calculating the next generation
+        function create_next_generation() {
+            a1a1 = p * p;
+            a1a2 = 2 * p * q;
+            a2a2 = q * q;
+        }
+
+        function round_number(value, places) {
+            if(places) {
+                var pow = Math.pow(10, places);
+                return Math.round(value * pow) / pow
+            }else {
+                return Math.round(value * 100) / 100
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
