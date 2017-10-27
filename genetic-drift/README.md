@@ -26,11 +26,31 @@ When a fair coin is tossed, heads and tails both have a 50% chance of appearing.
 > We will be able to create this perfectly in a binomial distribution because
   flipping a coin is an event that guarantees only two possible outcomes(**H**, **T**), we will be able to calculate the exact probability distribution given the probabilities of the two outcomes and the number of events.
 
+Eg.
+==
+
+If a coin is flipped __10__ times, what is the probability that it will return exactly __2__ tails.
 
 
+#### Chart of Table of Outcomes
+|Number of Flips|Visualized Outcomes|Total Distinct Outcome|
+|---------------|-------------------|-------------|
+| 1             | H  T (2<sup>1</sup>)       |      2      |
+| 2             |    HH HT TH TT (2<sup>2</sup>)   |      4      |
+| 3             |        ... (2<sup>3</sup>)       |      8      |
+|      ...      |        ...        |     ...     |
+| 10            |   2<sup>10</sup>  |    1024     |
 
 
+Let's populate a table to show the required outcome of **2** tails (**8** heads)
 
+```
+  1   2   3   4   5   6   7   8   9   10
+| H | T | H | H | H | H | H | T | H | H | 
+``` 
+There are 10 possible slots for the first tail to appear, and then there are 9 possible slots for the second tail to appear, so we could write `10 * 9`, but this is wrong(we will not have 90 possible combinations since the outcome would be the same if both tails swapped positions). Next thing we ought to do is divide by the number of tails (ie. __2__).
+What does this mean?
+> This means that out of 1024 possible ou
 
 
 
