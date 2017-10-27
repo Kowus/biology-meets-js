@@ -48,9 +48,19 @@ Let's populate a table to show the required outcome of **2** tails (**8** heads)
   1   2   3   4   5   6   7   8   9   10
 | H | T | H | H | H | H | H | T | H | H | 
 ``` 
-There are 10 possible slots for the first tail to appear, and then there are 9 possible slots for the second tail to appear, so we could write `10 * 9`, but this is wrong(we will not have 90 possible combinations since the outcome would be the same if both tails swapped positions). Next thing we ought to do is divide by the number of tails (ie. __2__).
+There are 10 possible slots for the first tail to appear, and then there are 9 possible slots for the second tail to appear, so we could write **`10 * 9`**, but this is wrong(we will not have __90__ possible combinations since the outcome would be the same if both tails swapped positions). Next thing we ought to do is divide by the number of tails (ie. __2__).
+
+The evaluation now becomes **`(10 * 9) / 2`** which will give answer of __45__.
+___
+
 What does this mean?
-> This means that out of 1024 possible ou
+
+> This means that out of the 1024 possible outcomes, only **45** will be
+exactly **2** tails.
+If break this down mathematically,
+
+**`45 / 1024`** _answer_: *__`4.39%`__*
+____
 
 
 
