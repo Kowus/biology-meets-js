@@ -91,7 +91,7 @@ function getRandomIntInclusive(min, max) {
 }
 ```  
 refer to [The Math.random() specification on MDN . . .][Math.random specification]
-> try changing the value of **`rounds`** to lower values and then to higher values **(preferably powers of 10)**. You'll realize that it reinforces the point that _**Chance Effect** is much stronger in smaller populations than it is in larger populations_.
+> try changing the value of **`rounds`** to lower values and then to higher values **(preferably powers of 10)**. You'll realize that it reinforces the point _**Chance Effect** is much stronger in smaller populations than it is in larger populations_.
 
 
 
