@@ -66,6 +66,7 @@ __Note:__ If a fair coin is flipped many times, the average of the values should
 
 Let's create this principle in Javascript. We'll generate a bunch of random numbers from __0__ to __10__ and find the average after 1000 rounds.
 
+[Link to a repository file](./random.html)
 ```javascript
 let sum = 0,
     rounds = 1000;
