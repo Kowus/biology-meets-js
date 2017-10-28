@@ -76,16 +76,25 @@ for (let i = 0; i < rounds; i++) {
 let average = sum / rounds;
 alert(`The average after ${rounds} rounds is ${average}`);
 
+/*
+* The Math.random() function returns random values between
+* 0 and 1. This function will make it return numbers in
+* our own custom range.
+* */
 function getRandomIntInclusive(min, max) {
+    // return the smallest integer greater than or equal to min.
     min = Math.ceil(min);
+    // return the largest integer less than or equal to max.
     max = Math.floor(max);
+    
     return Math.floor(Math.random() * (max - min + 1)) + min; 
-    //The maximum is inclusive and the minimum is inclusive
 }
 ```  
+refer to [The Math.random() specification on MDN . . .][Math.random specification]
 > try changing the value of **`rounds`** to lower values and then to higher values **(preferably powers of 10)**. You'll realize that it reinforces the point that _**Chance Effect** is much stronger in smaller populations than it is in larger populations_.
 
 
 
 
 
+[Math.random specification]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values_inclusive
