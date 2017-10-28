@@ -57,12 +57,32 @@ What does this mean?
 
 > This means that out of the 1024 possible outcomes, only **45** will be
 exactly **2** tails.
-If break this down mathematically,
+Break this down mathematically,
 
 **`45 / 1024`** _answer_: *__`4.39%`__*
 ____
 
+__Note:__ If a fair coin is flipped many times, the average of the values should be close to the midpoint.
 
+Let's create this principle in Javascript. We'll generate a bunch of random numbers from __0__ to __10__ and find the average after 1000 rounds.
+
+```javascript
+let sum = 0,
+rounds = 1000;
+for (let i = 0; i < rounds; i++) {
+    sum += getRandomIntInclusive(0, 10);
+}
+
+let average = sum / rounds;
+alert(`The average after ${rounds} rounds is ${average}`);
+
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
+    //The maximum is inclusive and the minimum is inclusive
+}
+```  
 
 
 
