@@ -68,7 +68,7 @@ Let's create this principle in Javascript. We'll generate a bunch of random numb
 
 ```javascript
 let sum = 0,
-rounds = 1000;
+    rounds = 1000;
 for (let i = 0; i < rounds; i++) {
     sum += getRandomIntInclusive(0, 10);
 }
@@ -83,7 +83,7 @@ function getRandomIntInclusive(min, max) {
     //The maximum is inclusive and the minimum is inclusive
 }
 ```  
-
+> try changing the value of **`rounds`** to lower values and then to higher values **(preferably powers of 10)**. You'll realize that it reinforces the point that _**Chance Effect** is much stronger in smaller populations than it is in larger populations_.
 
 
 
