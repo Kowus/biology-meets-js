@@ -47,7 +47,9 @@ Let's populate a table to show the required outcome of **2** tails (**8** heads)
 ```
   1   2   3   4   5   6   7   8   9   10
 | H | T | H | H | H | H | H | T | H | H | 
-``` 
+```
+[Link to coin tossing flipping](./coin-flip.html)
+ 
 There are 10 possible slots for the first tail to appear, and then there are 9 possible slots for the second tail to appear, so we could write **`10 * 9`**, but this is wrong(we will not have __90__ possible combinations since the outcome would be the same if both tails swapped positions). Next thing we ought to do is divide by the number of tails (ie. __2__).
 
 The evaluation now becomes **`(10 * 9) / 2`** which will give answer of __45__.
@@ -66,7 +68,7 @@ __Note:__ If a fair coin is flipped many times, the average of the values should
 
 Let's create this principle in Javascript. We'll generate a bunch of random numbers from __0__ to __10__ and find the average after 1000 rounds.
 
-[Link to a repository file](./random.html)
+[Link to example file](./random.html)
 ```javascript
 let sum = 0,
     rounds = 1000;
